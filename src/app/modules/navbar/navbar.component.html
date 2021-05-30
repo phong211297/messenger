@@ -1,0 +1,26 @@
+<nav class="main-navigation">
+
+    <!-- Left side template  -->
+    <section class="left-side" [ngTemplateOutlet]="getSectionTemplate('left') || defaultLeftSideTemplate"></section>
+
+    <!-- Middle template  -->
+    <section class="middle-side" [ngTemplateOutlet]="getSectionTemplate('middle') || defaultMiddleTemplate"></section>
+
+    <!-- Right side template  -->
+    <section class="right-side" [ngTemplateOutlet]="getSectionTemplate('right') || defaultRightSideTemplate"></section>
+
+</nav>
+
+<!-- Default left side template-->
+<ng-template #defaultLeftSideTemplate>
+    <div class="profile-image-wrapper">
+        <img class="profile-image" src="#" />
+    </div>
+</ng-template>
+
+<!--Default title template-->
+<ng-template #defaultMiddleTemplate>
+</ng-template>
+
+<!--Default right side template-->
+<ng-template #defaultRightSideTemplate></ng-template>
