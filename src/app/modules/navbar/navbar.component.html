@@ -1,33 +1,44 @@
 <nav class="main-navigation">
 
-    <!-- Left side template  -->
-    <section class="left-side">
-        <ng-template [ngTemplateOutlet]="getSectionTemplate('left') || defaultLeftSideTemplate"></ng-template>
-    </section>
+  <!-- Left side template  -->
+  <section class="left-side">
+    <ng-template
+      [ngTemplateOutlet]="getSectionTemplate('left') || defaultLeftSideTemplate"
+    ></ng-template>
+  </section>
 
-    <!-- Middle template  -->
-    <section class="middle-side">
-        <ng-template  [ngTemplateOutlet]="getSectionTemplate('middle') || defaultMiddleTemplate"></ng-template>
-    </section>
+  <!-- Middle template  -->
+  <section class="middle-side">
+    <ng-template
+      [ngTemplateOutlet]="getSectionTemplate('middle') || defaultMiddleTemplate"
+    ></ng-template>
+  </section>
 
-    <!-- Right side template  -->
-    <section class="right-side">
-        <ng-template [ngTemplateOutlet]="getSectionTemplate('right') || defaultRightSideTemplate"></ng-template>
-    </section>
-
+  <!-- Right side template  -->
+  <section class="right-side">
+    <ng-template
+      [ngTemplateOutlet]="
+        getSectionTemplate('right') || defaultRightSideTemplate
+      "
+    ></ng-template>
+  </section>
 </nav>
 
 <!-- Default left side template-->
 <ng-template #defaultLeftSideTemplate>
-    <img class="profile-image" src="../../../assets/images/profile-image.jpg" alt="profile-image" />
+  <img
+    class="profile-image"
+    src="../../../assets/images/profile-image.jpg"
+    alt="profile-image"
+  />
 </ng-template>
 
 <!--Default title template-->
 <ng-template #defaultMiddleTemplate>
+  <h2 class="page-title">Chat</h2>
 </ng-template>
 
 <!--Default right side template-->
 <ng-template #defaultRightSideTemplate>
-    <!-- <i nz-icon class="edit-icon" nzType="form" nzTheme="outline"></i> -->
-    <button nz-button nzType="primary">Primary</button>
-</ng-template>
+  <i class="edit-icon" nz-icon nzType="form" nzTheme="outline"></i
+></ng-template>

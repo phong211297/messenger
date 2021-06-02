@@ -1,3 +1,5 @@
+import { SharedModule } from './shared/shared.module';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,24 +12,30 @@ import en from '@angular/common/locales/en';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './modules/navbar/navbar.component';
 import { NavbarControllerService } from './shared/service/navbar-controller.service';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzAutocompleteModule } from 'ng-zorro-antd/auto-complete';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NavbarModule } from './modules/navbar/navbar.module';
 
 registerLocaleData(en);
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    NzButtonModule,
+    NzIconModule,
+    NzAutocompleteModule,
+    NzInputModule,
+    NavbarModule,
+    SharedModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }, NavbarControllerService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

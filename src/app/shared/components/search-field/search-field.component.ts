@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-search-field',
@@ -8,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class SearchFieldComponent implements OnInit {
   //#region Properties
 
+  // Output search value
+  @Output() voted = new EventEmitter<string>();
+
+  // Search input value
   public inputValue?: string;
 
+  // Autocomplete search options
   public options: Array<{ value: string; category: string; count: number }> =
     [];
 
@@ -22,7 +27,8 @@ export class SearchFieldComponent implements OnInit {
   //#region Methods
   public ngOnInit(): void {}
 
-  public onChange(e: Event): void {
+  // Trigger on search change
+  public onSearchChange(e: Event): void {
     const value = (e.target as HTMLInputElement).value;
     this.options = new Array(this.getRandomInt(5, 15))
       .join('.')
@@ -36,6 +42,11 @@ export class SearchFieldComponent implements OnInit {
 
   private getRandomInt(max: number, min: number = 0): number {
     return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  // Trigger enter search
+  public triggerSearch(): void {
+    this.voted.emit(this.inputValue);
   }
   //#endregion
 }

@@ -1,18 +1,22 @@
 <div class="example-input">
-  <nz-input-group nzSearch nzSize="large" [nzAddOnAfter]="suffixIconButton">
+
+  <!-- Input search field  -->
+  <nz-input-group nzSearch nzSize="large" [nzPrefix]="suffixIcon">
     <input
       placeholder="input here"
       nz-input
       [(ngModel)]="inputValue"
-      (input)="onChange($event)"
+      (change)="onSearchChange($event)"
       [nzAutocomplete]="auto"
     />
   </nz-input-group>
-  <ng-template #suffixIconButton>
-    <button nz-button nzType="primary" nzSize="large" nzSearch>
-      <i nz-icon nzType="search" nzTheme="outline"></i>
-    </button>
+
+  <!-- Input search icon  -->
+  <ng-template #suffixIcon>
+    <i class="search-icon" nz-icon nzType="search"></i>
   </ng-template>
+
+  <!-- Autocomplete list options  -->
   <nz-autocomplete #auto>
     <nz-auto-option
       class="global-search-item"
