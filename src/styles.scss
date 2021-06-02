@@ -1,5 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap-grid.min.css';
-@import "~ng-zorro-antd/ng-zorro-antd.min.css";
+
+// Ng zorro base style 
 @import "~ng-zorro-antd/style/index.min.css"; /* Import base styles */
-@import "~ng-zorro-antd/button/style/index.min.css";  /* Import one component's styles */
+
+// Ng zorro components style
+@import "~ng-zorro-antd/button/style/index.min.css";  
+@import "~ng-zorro-antd/auto-complete/style/index.min.css";
+@import "~ng-zorro-antd/form/style/index.min.css";
+@import "~ng-zorro-antd/input/style/index.min.css";
+@import "~ng-zorro-antd/input-number/style/index.min.css";
+@import "~ng-zorro-antd/icon/style/index.min.css";
