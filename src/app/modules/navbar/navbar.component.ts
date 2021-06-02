@@ -1,11 +1,14 @@
-import { Component, OnInit, TemplateRef } from '@angular/core';
+import { SectionTemplateModel } from './../../shared/models/section-template.model';
+import { NavbarControllerService } from './../../shared/service/navbar-controller.service';
+import { Component, OnDestroy, OnInit, TemplateRef } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, OnDestroy {
   //#region Properties
 
   // Left template ref
@@ -41,18 +44,36 @@ export class NavbarComponent implements OnInit {
     this._middleTemplateRef = templateRef;
   }
 
+  // Subscription
+  private _subscription: Subscription;
+
   //#endregion
 
   //#region Constructor
 
-  public constructor() {}
+  public constructor(
+    protected navbarControllerService: NavbarControllerService
+  ) {}
 
   //#endregion
 
   //#region Methods
 
   // Trigger when component inits
-  public ngOnInit(): void {}
+  public ngOnInit(): void {
+    // Subscription binding
+    this._subscription = new Subscription();
+
+    // Update navbar template
+    const updateNavbarSubscription =
+      this.navbarControllerService.navbarTemplateHolder.subscribe(
+        (sectionTemplate: SectionTemplateModel) => {
+          this.updateSectionTemplate(sectionTemplate);
+        }
+      );
+
+    this._subscription.add(updateNavbarSubscription);
+  }
 
   // Get section template
   public getSectionTemplate(position: string): TemplateRef<any> | undefined {
@@ -76,25 +97,37 @@ export class NavbarComponent implements OnInit {
   }
 
   // Update section template
-  public updateSectionTemplate(
-    position: string,
-    template: TemplateRef<any>
-  ): void {
-    switch (position) {
+  public updateSectionTemplate(sectionTemplate: SectionTemplateModel): void {
+    if (
+      !sectionTemplate ||
+      !sectionTemplate.title ||
+      !sectionTemplate.template
+    ) {
+      return;
+    }
+    
+    switch (sectionTemplate.title) {
       case 'left':
-        this.setLeftTemplateRef(template);
+        this.setLeftTemplateRef(sectionTemplate.template);
         break;
 
       case 'middle':
-        this.setMiddleTemplateRef(template);
+        this.setMiddleTemplateRef(sectionTemplate.template);
         break;
 
       case 'right':
-        this.setRightTemplateRef(template);
+        this.setRightTemplateRef(sectionTemplate.template);
         break;
     }
 
     return;
+  }
+
+  // Trigger when component destroys
+  public ngOnDestroy(): void {
+    if (this._subscription && !this._subscription.closed) {
+      this._subscription.unsubscribe();
+    }
   }
   //#endregion
 }
