@@ -1,3 +1,5 @@
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,22 +14,25 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './modules/navbar/navbar.component';
 import { NavbarControllerService } from './shared/service/navbar-controller.service';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzAutocompleteModule } from 'ng-zorro-antd/auto-complete';
 
 registerLocaleData(en);
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent
-  ],
+  declarations: [AppComponent, NavbarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    NzInputModule,
+    NzAutocompleteModule,
+    NzIconModule,
+    NzButtonModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }, NavbarControllerService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
