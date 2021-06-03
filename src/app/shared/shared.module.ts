@@ -6,9 +6,10 @@ import { NgModule } from '@angular/core';
 import { SearchFieldComponent } from './components/search-field/search-field.component';
 import { NzAutocompleteModule } from 'ng-zorro-antd/auto-complete';
 import { NzInputModule } from 'ng-zorro-antd/input';
+import { MessengerOverviewComponent } from './components/messenger-overview/messenger-overview.component';
 
 @NgModule({
-  declarations: [SearchFieldComponent],
+  declarations: [SearchFieldComponent, MessengerOverviewComponent],
   imports: [
     CommonModule,
     NzAutocompleteModule,
@@ -17,6 +18,6 @@ import { NzInputModule } from 'ng-zorro-antd/input';
     NzIconModule,
     NzButtonModule,
   ],
-  exports: [SearchFieldComponent],
+  exports: [SearchFieldComponent, MessengerOverviewComponent],
 })
 export class SharedModule {}
