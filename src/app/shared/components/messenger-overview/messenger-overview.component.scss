@@ -1,20 +1,41 @@
 .messenger-overview {
   display: flex;
-  height: 65px;
+  height: 58px;
 
   .messenger-profile {
-    flex: 0 0 65px;
+    flex: 0 0 58px;
   }
 
   .messenger-content {
     flex: 1 1 auto;
     padding-left: 15px;
+
+    .messenger-title {
+      font-size: 18px;
+      margin: 0px;
+    }
+
+    .messenger-paragraph {
+      font-size: 14px;
+      max-width: calc(100vw - 130px);
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
   }
 
   .messenger-status {
-    flex: 0 0 35px;
+    flex: 0 0 auto;
+    margin-left: 15px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    .unread-icon {
+      width: 12px;
+      height: 12px;
+      background-color: hsl(214, 89%, 52%);
+      border-radius: 50%;
+    }
   }
 }

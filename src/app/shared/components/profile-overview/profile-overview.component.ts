@@ -16,6 +16,10 @@ export class ProfileOverviewComponent implements OnInit {
   @Input('profile-image')
   public profileImage: string = '../../../../assets/images/demo-profile.jpg';
 
+  // Input image source
+  @Input('profile-title')
+  public profileTitle: string;
+
   // Input should user have story
   @Input('should-user-have-story')
   public shouldUserHaveStory: boolean = false;

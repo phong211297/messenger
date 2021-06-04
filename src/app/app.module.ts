@@ -1,3 +1,4 @@
+import { CoreUIModule } from './core-ui/core-ui.module';
 import { SharedModule } from './shared/shared.module';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,7 +17,8 @@ import { NavbarControllerService } from './shared/service/navbar-controller.serv
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzAutocompleteModule } from 'ng-zorro-antd/auto-complete';
 import { NzInputModule } from 'ng-zorro-antd/input';
-import { NavbarModule } from './modules/navbar/navbar.module';
+import { MessageHomeModule } from './modules/message-home/message-home.module';
+import { FeedHomeModule } from './modules/feed-home/feed-home.module';
 
 registerLocaleData(en);
 
@@ -32,8 +34,10 @@ registerLocaleData(en);
     NzIconModule,
     NzAutocompleteModule,
     NzInputModule,
-    NavbarModule,
+    CoreUIModule,
     SharedModule,
+    MessageHomeModule,
+    FeedHomeModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }, NavbarControllerService],
   bootstrap: [AppComponent],

@@ -1,27 +1,13 @@
 <div class="page-wrapper">
+
+  <!-- Navigation bar section  -->
   <app-navbar></app-navbar>
 
+  <!-- Main page content section  -->
   <div class="page-content">
-    <!-- Search field section  -->
-    <section class="search-field">
-      <app-search-field></app-search-field>
-    </section>
-
-    <!-- List profile overview section  -->
-    <section class="list-profile-overview">
-      <div
-        class="profile-wrapper"
-        *ngFor="let profile of [1, 2, 3, 4, 5, 8, 9, 0, 1]"
-      >
-        <app-profile-overview></app-profile-overview>
-      </div>
-    </section>
-
-    <!-- List messenger overview section  -->
-    <section class="list-message-overview">
-      <div class="message-overview">
-        <app-messenger-overview></app-messenger-overview>
-      </div>
-    </section>
+    <router-outlet></router-outlet>
   </div>
+
+  <!-- Tab bar section  -->
+  <app-tabbar></app-tabbar>
 </div>

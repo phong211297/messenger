@@ -1,0 +1,19 @@
+.main-tabbar {
+  display: flex;
+  height: 75px;
+
+  .tabbar-item {
+    flex-basis: 50%;
+    text-align: center;
+
+    .tabbar-item-icon {
+      font-size: 24px;
+      display: block;
+      margin-top: 5px;
+    }
+
+    .tabbar-item-title {
+      font-size: 10px;
+    }
+  }
+}

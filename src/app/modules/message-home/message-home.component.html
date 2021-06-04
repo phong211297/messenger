@@ -1,0 +1,18 @@
+<!-- Search field section  -->
+<section class="search-field-wrapper">
+    <app-search-field></app-search-field>
+</section>
+
+<!-- List profile overview section  -->
+<section class="list-profile-overview">
+    <div class="profile-wrapper" *ngFor="let profile of [1, 2, 3, 4, 5, 8, 9, 0, 1]">
+        <app-profile-overview [profile-title]="'Demo title'"></app-profile-overview>
+    </div>
+</section>
+
+<!-- List messenger overview section  -->
+<section class="list-message-overview">
+    <div class="message-overview" *ngFor="let profile of [1, 2, 3, 4, 5, 8, 9, 0, 1]">
+        <app-messenger-overview></app-messenger-overview>
+    </div>
+</section>
