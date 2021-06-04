@@ -2,6 +2,19 @@
   <app-navbar></app-navbar>
 
   <div class="page-content">
-    <app-search-field></app-search-field>
+    <!-- Search field content  -->
+    <div class="search-field-wrapper">
+      <app-search-field></app-search-field>
+    </div>
+
+    <!-- List profile overview  -->
+    <div class="list-profile-wrapper">
+      <div
+        class="profile-wrapper"
+        *ngFor="let user of [1, 2, 3, 4, 5, 1, 1, 1]"
+      >
+        <app-profile-overview></app-profile-overview>
+      </div>
+    </div>
   </div>
 </div>
