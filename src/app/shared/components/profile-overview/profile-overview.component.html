@@ -1,0 +1,13 @@
+<div class="profile-wrapper">
+
+  <!-- Profile picture -->
+  <img class="profile-picture" [src]="imgSrc" />
+  
+  <!-- Profile status  -->
+  <div class="profile-status" ngClass="status">
+    <div [ngSwitch]="status">
+      <div *ngSwitchCase="'active'" class="active"></div>
+      <div *ngSwitchCase="'away'" class="away">55 minutes</div>
+    </div>
+  </div>
+</div>
