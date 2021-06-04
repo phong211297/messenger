@@ -1,10 +1,11 @@
 .profile-wrapper {
   display: inline-block;
   position: relative;
+  margin-bottom: 5px;
 
   .profile-picture {
-    height: 55px;
-    width: 55px;
+    height: 58px;
+    width: 58px;
     border-radius: 50%;
     display: inline-block;
   }
@@ -27,4 +28,17 @@
       border-radius: 50%;
     }
   }
+}
+
+.profile-title p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-align: center;
+  line-height: 16px;
+  width: 58px;
+  height: 32px;
+  margin-bottom: 0px;
 }

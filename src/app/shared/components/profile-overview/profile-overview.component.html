@@ -1,8 +1,7 @@
 <div class="profile-wrapper">
-
   <!-- Profile picture -->
-  <img class="profile-picture" [src]="imgSrc" />
-  
+  <img class="profile-picture" [src]="profileImage" />
+
   <!-- Profile status  -->
   <div class="profile-status" ngClass="status">
     <div [ngSwitch]="status">
@@ -10,4 +9,9 @@
       <div *ngSwitchCase="'away'" class="away">55 minutes</div>
     </div>
   </div>
+</div>
+
+<!-- Profile title  -->
+<div class="profile-title" *ngIf="profileTitle">
+  <p>{{profileTitle}}</p>
 </div>

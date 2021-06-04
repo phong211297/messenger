@@ -1,0 +1,6 @@
+<nav class="main-tabbar">
+    <section class="tabbar-item" *ngFor="let item of listItems" (click)="navigateTo(item.link)">
+        <i class="tabbar-item-icon" nz-icon [nzType]="item.icon" [nzTheme]="currentPath === item.link ? 'fill' : 'outline'"></i>
+        <span class="tabbar-item-title">{{item.title}}</span>
+    </section>
+</nav>

@@ -1,20 +1,13 @@
 <div class="page-wrapper">
+
+  <!-- Navigation bar section  -->
   <app-navbar></app-navbar>
 
+  <!-- Main page content section  -->
   <div class="page-content">
-    <!-- Search field content  -->
-    <div class="search-field-wrapper">
-      <app-search-field></app-search-field>
-    </div>
-
-    <!-- List profile overview  -->
-    <div class="list-profile-wrapper">
-      <div
-        class="profile-wrapper"
-        *ngFor="let user of [1, 2, 3, 4, 5, 1, 1, 1]"
-      >
-        <app-profile-overview></app-profile-overview>
-      </div>
-    </div>
+    <router-outlet></router-outlet>
   </div>
+
+  <!-- Tab bar section  -->
+  <app-tabbar></app-tabbar>
 </div>

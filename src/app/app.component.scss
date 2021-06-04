@@ -1,18 +1,4 @@
-.page-wrapper {
-  padding: 0 20px;
-}
-
-.list-profile-wrapper {
-  display: flex;
-  width: 100%;
-  overflow-x: auto;
-  margin-top: 10px;
-
-  .profile-wrapper {
-    margin-right: 8px;
-  }
-
-  .profile-wrapper:last-child {
-    margin-right: 8px;
-  }
+.page-content {
+  overflow: auto;
+  height: calc(100vh - 125px);
 }
