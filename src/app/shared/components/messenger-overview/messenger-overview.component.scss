@@ -13,5 +13,8 @@
 
   .messenger-status {
     flex: 0 0 35px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 }

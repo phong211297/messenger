@@ -1,18 +1,18 @@
 <div class="messenger-overview">
+  <!-- Profile section  -->
+  <div class="messenger-profile">
+    <app-profile-overview></app-profile-overview>
+  </div>
 
-    <!-- Profile section  -->
-    <div class="messenger-profile"></div>
+  <!-- Content section  -->
+  <div class="messenger-content">
+    <!-- Content title section  -->
+    <h3 class="messenger-title">{{ messageTitle }}</h3>
 
-    <!-- Content section  -->
-    <div class="messenger-content">
+    <!-- Content paragraph section  -->
+    <p class="messenger-paragraph">{{ messageContent }}</p>
+  </div>
 
-        <!-- Content title section  -->
-        <h3 class="messenger-title">Messenger title</h3>
-
-        <!-- Content paragraph section  -->
-        <p class="messenger-paragraph">Messenger paragraph</p>
-    </div>
-
-    <!-- Status section  -->
-    <div class="messenger-status"></div>
+  <!-- Status section  -->
+  <div class="messenger-status" *ngIf="messageStatus === 'unread'"></div>
 </div>

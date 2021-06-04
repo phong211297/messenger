@@ -1,3 +1,24 @@
 .page-wrapper {
   padding: 0 20px;
 }
+
+.list-profile-overview {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  margin: 15px 0px;
+
+  .profile-wrapper {
+    margin-right: 8px;
+  }
+
+  .profile-wrapper:last-child {
+    margin-right: 8px;
+  }
+}
+
+.list-message-overview {
+  .message-overview {
+    margin-bottom: 15px;
+  }
+}

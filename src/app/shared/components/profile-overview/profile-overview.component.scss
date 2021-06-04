@@ -1,0 +1,30 @@
+.profile-wrapper {
+  display: inline-block;
+  position: relative;
+
+  .profile-picture {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .profile-status {
+    padding: 2px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0px;
+    right: 0px;
+
+    .active {
+      background-color: #31a24c;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+  }
+}
