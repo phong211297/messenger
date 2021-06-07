@@ -1,0 +1,18 @@
+<div class="messenger-overview">
+  <!-- Profile section  -->
+  <div class="messenger-profile">
+    <app-profile-overview
+      [profile-size]="'sm'"
+      [has-story]="true"
+    ></app-profile-overview>
+  </div>
+
+  <!-- Content section  -->
+  <div class="messenger-content">
+    <!-- Content title section  -->
+    <h3 class="messenger-title">{{ messageTitle }}</h3>
+
+    <!-- Content paragraph section  -->
+    <p class="messenger-description">{{ messageContent }}</p>
+  </div>
+</div>

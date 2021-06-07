@@ -25,6 +25,8 @@ export class FeedHomeComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('middleSideTemplate')
   public middleSideTemplate: TemplateRef<any>;
 
+  // Tabs section title
+  public tabSectionsTitle: string[] = ['Active', 'Feed'];
   //#endregion
 
   //#region Constructor

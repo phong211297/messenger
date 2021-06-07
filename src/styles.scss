@@ -11,6 +11,7 @@
 @import "~ng-zorro-antd/input/style/index.min.css";
 @import "~ng-zorro-antd/input-number/style/index.min.css";
 @import "~ng-zorro-antd/icon/style/index.min.css";
+@import "~ng-zorro-antd/tabs/style/index.min.css";
 
 .icon-svg {
   mask-position: center;
@@ -19,21 +20,21 @@
   width: 24px;
   height: 24px;
   display: inline-block;
-  background-color: black;
+  background-color: grey;
 }
 
 .icon-messenger {
-  mask-image: url("./assets/icon/chat.svg");
-}
-
-.icon-messenger.active {
   mask-image: url("./assets/icon/chat-fill.svg");
 }
 
+.icon-messenger.active {
+  background-color: #1876f2;
+}
+
 .icon-people {
-  mask-image: url("./assets/icon/people.svg");
+  mask-image: url("./assets/icon/people-fill.svg");
 }
 
 .icon-people.active {
-  mask-image: url("./assets/icon/people-fill.svg");
+  background-color: #1876f2;
 }
