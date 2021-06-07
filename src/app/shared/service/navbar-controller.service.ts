@@ -27,5 +27,13 @@ export class NavbarControllerService {
   public updateSectionTemplate(sectionTemplate: SectionTemplateModel): void {
     this._navbarTemplateSubject.next(sectionTemplate);
   }
+
+  // Reset section template
+  public resetSectionTemplate(): void {
+    this._navbarTemplateSubject.next({ title: 'left', template: null });
+    this._navbarTemplateSubject.next({ title: 'middle', template: null });
+    this._navbarTemplateSubject.next({ title: 'right', template: null });
+
+  }
   //#endregion
 }

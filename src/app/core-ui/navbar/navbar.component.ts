@@ -98,14 +98,10 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   // Update section template
   public updateSectionTemplate(sectionTemplate: SectionTemplateModel): void {
-    if (
-      !sectionTemplate ||
-      !sectionTemplate.title ||
-      !sectionTemplate.template
-    ) {
+    if (!sectionTemplate || !sectionTemplate.title) {
       return;
     }
-    
+
     switch (sectionTemplate.title) {
       case 'left':
         this.setLeftTemplateRef(sectionTemplate.template);

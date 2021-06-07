@@ -1,1 +1,11 @@
-<p>feed-home works!</p>
+<nz-tabset nzType="card">
+    <nz-tab *ngFor="let tab of ['Active','Feed']" [nzTitle]="tab">Content of Tab Pane {{ tab }}</nz-tab>
+</nz-tabset>
+
+<section class="navigation-bar-overrider">
+    <ng-template #rightSideTemplate></ng-template>
+
+    <ng-template #middleSideTemplate>
+        <h2 class="page-title">People</h2>
+    </ng-template>
+</section>

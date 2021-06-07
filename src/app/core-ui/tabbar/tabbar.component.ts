@@ -19,12 +19,12 @@ export class TabbarComponent implements OnInit, OnDestroy {
   public listItems: any[] = [
     {
       title: 'Chat',
-      icon: 'message',
+      icon: 'icon-messenger',
       link: '/message',
     },
     {
       title: 'Feed',
-      icon: 'team',
+      icon: 'icon-people',
       link: '/feed',
     },
   ];

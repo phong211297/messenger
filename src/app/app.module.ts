@@ -19,6 +19,7 @@ import { NzAutocompleteModule } from 'ng-zorro-antd/auto-complete';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { MessageHomeModule } from './modules/message-home/message-home.module';
 import { FeedHomeModule } from './modules/feed-home/feed-home.module';
+import { NzTabsModule } from 'ng-zorro-antd/tabs';
 
 registerLocaleData(en);
 
@@ -38,6 +39,7 @@ registerLocaleData(en);
     SharedModule,
     MessageHomeModule,
     FeedHomeModule,
+    NzTabsModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }, NavbarControllerService],
   bootstrap: [AppComponent],
