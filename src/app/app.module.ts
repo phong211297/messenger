@@ -1,3 +1,5 @@
+import { SliderControllerService } from './shared/service/slider-controller.service';
+import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { CoreUIModule } from './core-ui/core-ui.module';
 import { SharedModule } from './shared/shared.module';
 import { NzButtonModule } from 'ng-zorro-antd/button';
@@ -20,6 +22,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { MessageHomeModule } from './modules/message-home/message-home.module';
 import { FeedHomeModule } from './modules/feed-home/feed-home.module';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
+import { NzModalModule } from 'ng-zorro-antd/modal';
 
 registerLocaleData(en);
 
@@ -40,8 +43,14 @@ registerLocaleData(en);
     MessageHomeModule,
     FeedHomeModule,
     NzTabsModule,
+    NzCarouselModule,
+    NzModalModule,
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }, NavbarControllerService],
+  providers: [
+    { provide: NZ_I18N, useValue: en_US },
+    NavbarControllerService,
+    SliderControllerService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -10,6 +10,7 @@ import { MessengerOverviewComponent } from './components/messenger-overview/mess
 import { ProfileOverviewComponent } from './components/profile-overview/profile-overview.component';
 import { ChatActiveComponent } from './components/chat-active/chat-active.component';
 import { StoryOverviewComponent } from './components/story-overview/story-overview.component';
+import { NzModalModule } from 'ng-zorro-antd/modal';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { StoryOverviewComponent } from './components/story-overview/story-overvi
     FormsModule,
     NzIconModule,
     NzButtonModule,
+    NzModalModule,
   ],
   exports: [
     SearchFieldComponent,

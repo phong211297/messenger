@@ -12,6 +12,8 @@
 @import "~ng-zorro-antd/input-number/style/index.min.css";
 @import "~ng-zorro-antd/icon/style/index.min.css";
 @import "~ng-zorro-antd/tabs/style/index.min.css";
+@import "~ng-zorro-antd/carousel/style/index.min.css";
+@import "~ng-zorro-antd/modal/style/index.min.css";
 
 .icon-svg {
   mask-position: center;
@@ -37,4 +39,17 @@
 
 .icon-people.active {
   background-color: #1876f2;
+}
+
+.slider-dialog {
+  top: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  padding: 0px;
+
+  .ant-modal-content {
+    height: 100%;
+  }
 }

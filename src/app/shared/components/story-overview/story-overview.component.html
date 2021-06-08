@@ -1,6 +1,6 @@
-<div class="story-overview">
+<div class="story-overview" (click)="openStoryDetail()">
   <!-- Section story image  -->
-  <img src="../../../../assets/images/demo-story.jpg" />
+  <img [src]="lastStory.wallpaper" />
 
   <!-- Section story profile  -->
   <div class="story-profile">
@@ -12,11 +12,11 @@
 
   <!-- Section story count  -->
   <div class="story-count">
-    <span>4</span>
+    <span>{{ storySource.length }}</span>
   </div>
 
   <!-- Section story title  -->
   <div class="story-title">
-    <span>Nguyễn Sơn</span>
+    <span>{{ profile.title }}</span>
   </div>
 </div>

@@ -5,6 +5,7 @@
   img {
     width: 100%;
     height: 100%;
+    border-radius: 10px;
   }
 
   .story-profile {
@@ -20,6 +21,12 @@
     background-color: grey;
     border-radius: 50%;
     color: white;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
   }
 
   .story-title {
