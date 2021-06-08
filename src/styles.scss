@@ -51,5 +51,21 @@
 
   .ant-modal-content {
     height: 100%;
+
+    .ant-modal-close {
+      top: 30px;
+      right: 15px;
+
+      .ant-modal-close-x {
+        font-size: 20px;
+        width: unset;
+        height: unset;
+        line-height: unset;
+      }
+
+      svg {
+        fill: white;
+      }
+    }
   }
 }

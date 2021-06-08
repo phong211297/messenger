@@ -1,5 +1,20 @@
 <nz-carousel [nzDotPosition]="'top'">
   <div nz-carousel-content *ngFor="let index of array">
     <img src="../../../../assets/images/demo-story.jpg" />
+
+    <div class="profile-controller">
+      <!-- Profile overview section  -->
+      <div class="profile-overview"></div>
+
+      <!-- Profile content section  -->
+      <div class="profile-content">
+        <div class="profile-title"></div>
+
+        <div class="profile-description"></div>
+      </div>
+
+      <!-- Profile tool  -->
+      <div class="profile-tool"></div>
+    </div>
   </div>
 </nz-carousel>
