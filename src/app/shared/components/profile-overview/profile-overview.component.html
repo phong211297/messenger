@@ -1,4 +1,4 @@
-<div class="profile-wrapper">
+<div class="profile-wrapper {{ profileSize }}" [class.has-story]="hasStory">
   <!-- Profile picture -->
   <img class="profile-picture" [src]="profileImage" />
 
@@ -13,5 +13,5 @@
 
 <!-- Profile title  -->
 <div class="profile-title" *ngIf="profileTitle">
-  <p>{{profileTitle}}</p>
+  <p>{{ profileTitle }}</p>
 </div>

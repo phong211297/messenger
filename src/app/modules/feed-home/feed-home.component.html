@@ -1,1 +1,21 @@
-<p>feed-home works!</p>
+<nz-tabset nzType="card">
+  <nz-tab *ngFor="let tab of tabSectionsTitle" [nzTitle]="tab">
+    <!-- Action template section  -->
+    <div *ngIf="tab === 'Active'">
+      <app-feed-active></app-feed-active>
+    </div>
+
+    <!-- Feed template section  -->
+    <div *ngIf="tab === 'Feed'">
+      <app-feed-new></app-feed-new>
+    </div>
+  </nz-tab>
+</nz-tabset>
+
+<section class="navigation-bar-overrider">
+  <ng-template #rightSideTemplate></ng-template>
+
+  <ng-template #middleSideTemplate>
+    <h2 class="page-title">People</h2>
+  </ng-template>
+</section>

@@ -1,0 +1,38 @@
+.story-overview {
+  position: relative;
+  border-radius: 5px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .story-profile {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+  }
+
+  .story-count {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: grey;
+    border-radius: 50%;
+    color: white;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+  }
+
+  .story-title {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    color: white;
+  }
+}

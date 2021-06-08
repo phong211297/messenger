@@ -1,0 +1,22 @@
+<div class="story-overview" (click)="openStoryDetail()">
+  <!-- Section story image  -->
+  <img [src]="lastStory.wallpaper" />
+
+  <!-- Section story profile  -->
+  <div class="story-profile">
+    <app-profile-overview
+      [profile-size]="'sm'"
+      [has-story]="true"
+    ></app-profile-overview>
+  </div>
+
+  <!-- Section story count  -->
+  <div class="story-count">
+    <span>{{ storySource.length }}</span>
+  </div>
+
+  <!-- Section story title  -->
+  <div class="story-title">
+    <span>{{ profile.title }}</span>
+  </div>
+</div>

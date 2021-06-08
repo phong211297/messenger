@@ -8,12 +8,17 @@ import { NzAutocompleteModule } from 'ng-zorro-antd/auto-complete';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { MessengerOverviewComponent } from './components/messenger-overview/messenger-overview.component';
 import { ProfileOverviewComponent } from './components/profile-overview/profile-overview.component';
+import { ChatActiveComponent } from './components/chat-active/chat-active.component';
+import { StoryOverviewComponent } from './components/story-overview/story-overview.component';
+import { NzModalModule } from 'ng-zorro-antd/modal';
 
 @NgModule({
   declarations: [
     SearchFieldComponent,
     ProfileOverviewComponent,
     MessengerOverviewComponent,
+    ChatActiveComponent,
+    StoryOverviewComponent,
   ],
   imports: [
     CommonModule,
@@ -22,11 +27,14 @@ import { ProfileOverviewComponent } from './components/profile-overview/profile-
     FormsModule,
     NzIconModule,
     NzButtonModule,
+    NzModalModule,
   ],
   exports: [
     SearchFieldComponent,
     MessengerOverviewComponent,
     ProfileOverviewComponent,
+    ChatActiveComponent,
+    StoryOverviewComponent,
   ],
 })
 export class SharedModule {}

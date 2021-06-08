@@ -1,13 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~bootstrap/dist/css/bootstrap-grid.min.css';
+@import "~bootstrap/dist/css/bootstrap-grid.min.css";
 
-// Ng zorro base style 
+// Ng zorro base style
 @import "~ng-zorro-antd/style/index.min.css"; /* Import base styles */
 
 // Ng zorro components style
-@import "~ng-zorro-antd/button/style/index.min.css";  
+@import "~ng-zorro-antd/button/style/index.min.css";
 @import "~ng-zorro-antd/auto-complete/style/index.min.css";
 @import "~ng-zorro-antd/form/style/index.min.css";
 @import "~ng-zorro-antd/input/style/index.min.css";
 @import "~ng-zorro-antd/input-number/style/index.min.css";
 @import "~ng-zorro-antd/icon/style/index.min.css";
+@import "~ng-zorro-antd/tabs/style/index.min.css";
+@import "~ng-zorro-antd/carousel/style/index.min.css";
+@import "~ng-zorro-antd/modal/style/index.min.css";
+
+.icon-svg {
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-color: grey;
+}
+
+.icon-messenger {
+  mask-image: url("./assets/icon/chat-fill.svg");
+}
+
+.icon-messenger.active {
+  background-color: #1876f2;
+}
+
+.icon-people {
+  mask-image: url("./assets/icon/people-fill.svg");
+}
+
+.icon-people.active {
+  background-color: #1876f2;
+}
+
+.slider-dialog {
+  top: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  padding: 0px;
+
+  .ant-modal-content {
+    height: 100%;
+  }
+}

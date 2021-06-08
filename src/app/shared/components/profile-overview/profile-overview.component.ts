@@ -23,6 +23,15 @@ export class ProfileOverviewComponent implements OnInit {
   // Input should user have story
   @Input('should-user-have-story')
   public shouldUserHaveStory: boolean = false;
+
+  // Inpu profile overview size
+  @Input('profile-size')
+  public profileSize: string = 'md';
+
+  // Inpu profile overview size
+  @Input('has-story')
+  public hasStory: boolean = false;
+
   //#endregion
 
   //#region Constructor
