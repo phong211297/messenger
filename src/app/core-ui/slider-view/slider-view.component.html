@@ -1,5 +1,25 @@
 <nz-carousel [nzDotPosition]="'top'">
   <div nz-carousel-content *ngFor="let index of array">
     <img src="../../../../assets/images/demo-story.jpg" />
+
+    <div class="profile-controller">
+      <!-- Profile overview section  -->
+      <div class="profile-overview">
+        <app-profile-overview [profile-size]="'sm'" [has-story]="true"></app-profile-overview>
+
+        <!-- Profile content section  -->
+        <div class="profile-content">
+          <div class="profile-title">Nguyễn Sơn 17 giờ trước</div>
+
+          <div class="profile-description">Vexento</div>
+        </div>
+      </div>
+
+      <!-- Profile tool  -->
+      <div class="profile-tool">
+        <span class="icon-svg icon-three-dots icon-white"></span>
+        <span class="icon-svg icon-x icon-white" (click)="closeDialog()"></span>
+      </div>
+    </div>
   </div>
 </nz-carousel>

@@ -4,13 +4,52 @@ h3 {
 }
 
 [nz-carousel-content] {
-  text-align: center;
   color: #fff;
   overflow: hidden;
   height: 100%;
+  position: relative;
 
   img {
     width: 100%;
     height: 100vh;
+  }
+
+  .profile-controller {
+    position: absolute;
+    top: 30px;
+    display: flex;
+    width: calc(100vw - 30px);
+    left: 15px;
+    justify-content: space-between;
+    align-items: center;
+
+    .profile-overview {
+      display: flex;
+
+      .profile-content {
+        margin-left: 15px;
+        line-height: 20px;
+      }
+    }
+
+    .profile-tool {
+      span:first-child {
+        margin-right: 15px;
+      }
+
+      .icon-x {
+        -webkit-mask-size: 32px;
+      }
+    }
+  }
+}
+
+:host ::ng-deep .ant-carousel .slick-dots {
+  margin-left: 15px;
+  margin-right: 15px;
+
+  li {
+    width: unset;
+    flex: 1 1 auto;
   }
 }

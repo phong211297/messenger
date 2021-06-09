@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NzModalRef, NzModalService } from 'ng-zorro-antd/modal';
 
 @Component({
   selector: 'app-slider-view',
@@ -13,7 +14,7 @@ export class SliderViewComponent implements OnInit {
   //#endregion
 
   //#region Constructor
-  public constructor() {}
+  public constructor(private modalService: NzModalService) {}
 
   //#endregion
 
@@ -22,5 +23,11 @@ export class SliderViewComponent implements OnInit {
   // Trigger when component intis
   public ngOnInit(): void {}
 
+  // Close dialog
+  public closeDialog(): void {
+    this.modalService.closeAll();
+
+    return;
+  }
   //#endregion
 }

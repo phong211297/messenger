@@ -41,6 +41,22 @@
   background-color: #1876f2;
 }
 
+.icon-three-dots {
+  mask-image: url("./assets/icon/three-dots.svg");
+}
+
+.icon-x {
+  mask-image: url("./assets/icon/x.svg");
+}
+
+.icon-x-lg {
+  mask-image: url("./assets/icon/x-lg.svg");
+}
+
+.icon-white {
+  background-color: white;
+}
+
 .slider-dialog {
   top: 0px;
   margin: 0px;
@@ -51,5 +67,21 @@
 
   .ant-modal-content {
     height: 100%;
+
+    .ant-modal-close {
+      top: 30px;
+      right: 15px;
+
+      .ant-modal-close-x {
+        font-size: 20px;
+        width: unset;
+        height: unset;
+        line-height: unset;
+      }
+
+      svg {
+        fill: white;
+      }
+    }
   }
 }

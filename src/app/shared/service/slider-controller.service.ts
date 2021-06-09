@@ -30,6 +30,7 @@ export class SliderControllerService {
       },
       nzClassName: 'slider-dialog',
       nzWrapClassName: 'slider-dialog-wrapper',
+      nzClosable: false
     });
   }
   //#endregion
