@@ -4,17 +4,22 @@
 
     <div class="profile-controller">
       <!-- Profile overview section  -->
-      <div class="profile-overview"></div>
+      <div class="profile-overview">
+        <app-profile-overview [profile-size]="'sm'" [has-story]="true"></app-profile-overview>
 
-      <!-- Profile content section  -->
-      <div class="profile-content">
-        <div class="profile-title"></div>
+        <!-- Profile content section  -->
+        <div class="profile-content">
+          <div class="profile-title">Nguyễn Sơn 17 giờ trước</div>
 
-        <div class="profile-description"></div>
+          <div class="profile-description">Vexento</div>
+        </div>
       </div>
 
       <!-- Profile tool  -->
-      <div class="profile-tool"></div>
+      <div class="profile-tool">
+        <span class="icon-svg icon-three-dots icon-white"></span>
+        <span class="icon-svg icon-x icon-white" (click)="closeDialog()"></span>
+      </div>
     </div>
   </div>
 </nz-carousel>

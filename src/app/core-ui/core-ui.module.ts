@@ -5,7 +5,12 @@ import { NavbarModule } from './navbar/navbar.module';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 
 @NgModule({
-  imports: [NavbarModule, TabbarModule, SliderViewModule, NzCarouselModule],
+  imports: [
+    NavbarModule,
+    TabbarModule,
+    SliderViewModule,
+    NzCarouselModule,
+  ],
   exports: [NavbarModule, TabbarModule, SliderViewModule],
 })
 export class CoreUIModule {}
