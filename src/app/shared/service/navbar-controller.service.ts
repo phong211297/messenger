@@ -10,9 +10,15 @@ export class NavbarControllerService {
   private _navbarTemplateSubject: BehaviorSubject<any> =
     new BehaviorSubject<any>(null);
 
-  // Navbar holder
+  // Navbar subject display
+  private _navbarDisplaySubject: BehaviorSubject<any> =
+    new BehaviorSubject<any>(null);
+
+  // Navbar template holder
   public navbarTemplateHolder = this._navbarTemplateSubject.asObservable();
 
+  // Navbar display holder
+  public navbarDisplayHolder = this._navbarTemplateSubject.asObservable();
   //#endregion
 
   //#region Constructor
@@ -28,12 +34,18 @@ export class NavbarControllerService {
     this._navbarTemplateSubject.next(sectionTemplate);
   }
 
+  // Update navigation display
+  public hideNavigationBar(shouldNavHide: boolean): void {
+    this._navbarTemplateSubject.next(shouldNavHide);
+  }
+
   // Reset section template
   public resetSectionTemplate(): void {
     this._navbarTemplateSubject.next({ title: 'left', template: null });
     this._navbarTemplateSubject.next({ title: 'middle', template: null });
     this._navbarTemplateSubject.next({ title: 'right', template: null });
 
+    this._navbarDisplaySubject.next(false);
   }
   //#endregion
 }

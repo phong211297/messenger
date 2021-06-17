@@ -47,6 +47,9 @@ export class NavbarComponent implements OnInit, OnDestroy {
   // Subscription
   private _subscription: Subscription;
 
+  // Should navbar hide
+  public shouldNavbarHide: boolean = false;
+
   //#endregion
 
   //#region Constructor
@@ -72,7 +75,16 @@ export class NavbarComponent implements OnInit, OnDestroy {
         }
       );
 
+    // Update navbar display
+    const updateNavbarDisplaySubscription =
+      this.navbarControllerService.navbarDisplayHolder.subscribe(
+        (shouldNavHide: boolean) => {
+          this.shouldNavbarHide = shouldNavHide;
+        }
+      );
+
     this._subscription.add(updateNavbarSubscription);
+    this._subscription.add(updateNavbarDisplaySubscription);
   }
 
   // Get section template

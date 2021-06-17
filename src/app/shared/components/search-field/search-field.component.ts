@@ -9,7 +9,10 @@ export class SearchFieldComponent implements OnInit {
   //#region Properties
 
   // Output search value
-  @Output() voted = new EventEmitter<string>();
+  @Output() searchKeyword = new EventEmitter<string>();
+
+  // Output focus event
+  @Output() focusInput = new EventEmitter<boolean>();
 
   // Search input value
   public inputValue?: string;
@@ -46,7 +49,12 @@ export class SearchFieldComponent implements OnInit {
 
   // Trigger enter search
   public triggerSearch(): void {
-    this.voted.emit(this.inputValue);
+    this.searchKeyword.emit(this.inputValue);
+  }
+
+  // Trigger focus input
+  public triggerFocus(isFocused: boolean): void {
+    this.focusInput.emit(isFocused);
   }
   //#endregion
 }

@@ -1,5 +1,19 @@
 .search-field-wrapper {
   padding: 0 15px;
+  display: flex;
+
+  app-search-field {
+    flex: 1 1 auto;
+  }
+
+  .cancel-btn {
+    flex-basis: 50px;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    font-size: 16px;
+    color: #1876f2;
+  }
 }
 
 .list-profile-overview {
@@ -23,4 +37,12 @@
   .message-overview {
     margin-bottom: 15px;
   }
+}
+
+:host
+  ::ng-deep
+  .profile-wrapper:last-child
+  .messenger-overview
+  .messenger-content {
+  border-bottom: none;
 }
